@@ -13,6 +13,8 @@ public class BetterBasket extends Basket implements Serializable
 {
   private static final long serialVersionUID = 1L;
   
+  private int five = 6;
+  
 
   // You need to add code here
   // merge the items for same product,
