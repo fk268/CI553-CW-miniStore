@@ -29,8 +29,16 @@ import java.awt.*;
 class Main
 {
   public static void main (String args[])
-  {
-    new Main().begin();
+  { 
+	  
+	      try {
+	    	    UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+	        } catch (Exception e) {
+	    	  System.err.println("Failed to set look and feel: " + e.getMessage());
+	      }
+    
+	      
+	      new Main().begin();
   }
 
   /**

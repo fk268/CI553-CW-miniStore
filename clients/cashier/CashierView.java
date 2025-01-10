@@ -31,10 +31,12 @@ public class CashierView implements Observer
   private final JButton     theBtCheck = new JButton( CHECK );
   private final JButton     theBtBuy   = new JButton( BUY );
   private final JButton     theBtBought= new JButton( BOUGHT );
+  private final JButton     theBtCancel= new JButton("Cancel");
 
   private StockReadWriter theStock     = null;
   private OrderProcessing theOrder     = null;
   private CashierController cont       = null;
+  
   
   /**
    * Construct the view
@@ -80,6 +82,10 @@ public class CashierView implements Observer
     theBtBought.addActionListener(                  // Call back code
       e -> cont.doBought() );
     cp.add( theBtBought );                          //  Add to canvas
+    
+    theBtCancel.setBounds(16, 25 + 60*2, 80, 40);
+    theBtCancel.addActionListener( e-> cont.doCancel()); //call back code
+    cp.add(theBtCancel);
 
     theAction.setBounds( 110, 25 , 270, 20 );       // Message area
     theAction.setText( "" );                        // Blank

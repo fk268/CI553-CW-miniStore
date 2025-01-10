@@ -29,6 +29,12 @@ public class CashierController
   {
     model.doCheck(pn);
   }
+  
+  //** cancel interactions from view */
+  public void doCancel() {
+	      model.doCancel();
+  }
+  
 
    /**
    * Buy interaction from view
